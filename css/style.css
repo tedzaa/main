@@ -1,0 +1,68 @@
+
+.side {
+  position: absolute;
+  width: 50vw;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+
+  overflow-x: hidden;
+
+}
+.side.left {
+  left: 0;
+
+
+
+}
+.side.right:hover ~ .wrapper .front {
+  transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+}
+.side.right:hover ~ .wrapper .back {
+  transform: matrix3d(0.94, 0, 0.34, -0.00025, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+}
+.side.right {
+  right: 0;
+}
+.side.left:hover ~ .wrapper .front {
+  transform: matrix3d(0.94, 0, 0.34, 0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+}
+.side.left:hover ~ .wrapper .back {
+  transform: matrix3d(0.94, 0, 0.34, 0.0005, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1.1) translateX(-100px);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+/*
+  position: absolute;
+  left: 100px;
+  top: 100px;*/
+}
+
+.image {
+
+  perspective: 200px;
+
+  transition: all 0.2s ease;
+  background-image: url("../images/RegularMonolithMenu.png");
+  height: 400px;
+  width: 526px;
+  background-size: cover;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.8);
+}
+
+.front {
+  margin-right: 30px;
+  z-index: 1;
+}
+
+.back {
+  margin-left: 100px;
+  margin-top: -420px;
+  background-position: bottom;
+}
+/*# sourceMappingURL=style.css.map */
